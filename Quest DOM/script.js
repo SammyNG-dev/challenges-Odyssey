@@ -55,6 +55,9 @@ function createCard(animal) {
   cardButton.innerText = "Adopt Now"
   cardBody.appendChild(cardButton)
 
+  cardButton.addEventListener("click", ()=>{
+    alert(`${name} adopted`)
+  })
 
   // Step2:
 
@@ -73,14 +76,6 @@ function createCard(animal) {
 }
 
 /* Step 1: Use forEach instead of for-loop to iterate over animalsToAdopt and create cards */
-for (const animal of animalsToAdopt) {
-  createCard(animal);
-}
-
-// const buttons = document.getElementsByTagName("button")
-
-// for(let button in button){
-//     button.addEventListener(()=>{
-//     alert("Adopted")
-// })
-// }
+animalsToAdopt.forEach((animal)=>{
+  createCard(animal)
+})
