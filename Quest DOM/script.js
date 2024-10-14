@@ -43,9 +43,9 @@ function createCard(animal) {
 
   const cardBody = document.createElement("figcaption")
   cardBody.classList.add("card-body")
-  cards.appendChild(card)
+  card.appendChild(cardBody)
 
-  const cardTitle = createElement("h2")
+  const cardTitle = document.createElement("h2")
   cardTitle.classList.add("card-title")
   cardTitle.innerText = name
   cardBody.appendChild(cardTitle)
@@ -53,6 +53,7 @@ function createCard(animal) {
   const cardButton = document.createElement("button")
   cardButton.classList.add("card-button")
   cardButton.innerText = "Adopt Now"
+  cardBody.appendChild(cardButton)
 
 
   // Step2:
